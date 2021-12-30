@@ -744,7 +744,8 @@ function reloadBindings()
 
 	Cfgs.keyLayouts.qwerty[1][1] = key
 	Cfgs.keyLayouts.vqwerty[1][1] = key
-
+	categoriesQwerty[KEYSIMS.X] = nil
+	categoriesQwerty[KEYSIMS[string.upper(key)]] = 1
 	actionHotkey = Spring.GetActionHotKeys('gridmenu_next_page')
 	if actionHotkey[1] then
 		NEXT_PAGE_KEY = string.upper(actionHotkey[1])
